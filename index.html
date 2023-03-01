@@ -1,0 +1,383 @@
+<html>
+
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+
+	<body class="container">
+		<div class="row text-center">
+			<div class="col-8 offset-2 offset-lg-2">
+				<h1 class="edmondstyleSmall">Welcome to PYCS!</h1>
+			</div>
+		</div>
+			
+		<div class="row text-center">
+			<div class="col-2 offset-4 offset-lg-5">
+				<h1 class="edmondstyleSmall"><del>)(</del></h1>
+			</div>
+		</div>
+		
+		<div class="row text-center">
+			<div class="col-6 offset-3 offset-lg-3">
+				<h2 class="edmondstyleXSmall">(<strong>P</strong>redict <strong>Y</strong>our <strong>C</strong>rop<strong>S</strong>, pronounced like pisces)</h2>
+			</div>
+		</div>
+		
+		<div class="row text-center">
+			<div class="col-8 offset-2 offset-lg-2 edmondson">
+				<h1 class="edmondstyleSmall">Crop Yield Prediction</h1>
+			</div>
+		</div>
+		
+		<div class="row text-center">
+			<div class="col-8 offset-2 offset-lg-2">
+				<h1 class="edmondstyleSmall">And What-If Tool</h1>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-11">
+				<span class="col-12 offset-6 edmondstyleXSmall" ><button id="aboutBtn">About</button></span>
+			</div>
+		</div>
+			
+		<div class="row">
+			<div class="col-11">
+				<span class="col-12 edmondstyleXSmall"></span>
+			</div>
+		</div>
+		
+		<div class="about">
+			
+			<div class="row">
+				<div class="col-11">
+					<span class="col-12 offset-1 edmondstyleXSmall">PYCS is a What-If tool. Submit your data in .csv format, and PYCS will
+					give you its best prediction of crop yields (alfalfa) given your data. PYCS uses machine learning models to
+					forecast crop yields, so this tool can help you plan for shortages or surpluses based on factors like rain,
+					temperature, solar radiation, and more. What if reality ends up closely resembling the details you provide?
+					What if historical trends continue into the future? These are the questions PYCS intends to answer! (Please
+					allow 1 week for results.)</span>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-11">
+					<span class="col-12 edmondstyleXSmall"></span>
+				</div>
+			</div>
+		
+		</div><!-- </about> -->
+
+		<form action="" id="mainForm">
+		
+			<div class="row">
+				<div class="col-11 edmondstyleXSmall">
+					<input type="checkbox" id="annualizedChk">
+					<label for="annualizedChk"><strong>Annualized Mode: </strong><span id="annualizedOnOff">Off</span></label>
+				</div>
+			</div>
+			
+			
+			<div class="row">
+				<div class="col-11">
+					<span class="col-12 edmondstyleXSmall"></span>
+				</div>
+			</div>
+			
+			<div class="row edmondstyleXSmall">
+				<div class="col-11" id="fileFormatPerCut">
+					<strong>File Format:</strong> .csv, minimum 2 columns - (1) date_of_cut (mm/dd/yyyy) and (2) yield (tons/acre).
+				</div>
+				<div class="col-11" id="fileFormatPerYear">
+					<strong>File Format:</strong> .csv, minimum 2 columns - (1) year_of_cut (yyyy) and (2) yield (tons/acre).
+				</div>
+			</div>
+			
+			
+			
+			<div class="row">
+				<div class="col-11">
+					<span class="col-12 edmondstyleXSmall"></span>
+				</div>
+			</div>
+				
+			<div class="row">
+				<div class="col-5 edmondstyleXSmall">
+					<label for="email"><strong>Your email address:</strong></label>
+				</div>
+				
+				<div class="col-7 edmondstyleXSmall">
+					<label for="url"><strong>URL to your .csv dataset:</strong> (on GitHub, Google Drive, etc.)</label>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-5 edmondstyleXSmall">
+					<input class="pycsTextbox" type="text" id="email" />
+				</div>
+				
+				<div class="col-7 edmondstyleXSmall">
+					<input class="pycsTextbox" type="text" id="url" />
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-11">
+					<span class="col-12 edmondstyleXSmall"></span>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-5 edmondstyleXSmall">
+					<label for="location"><strong>Your location:</strong> (City, State)</label>
+				</div>
+				
+				<div class="col-7 edmondstyleXSmall">
+					<label for="name"><strong>Name this dataset:</strong> (ex.: what_if_low_rain, actual_radiation, etc.)</label>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-5 edmondstyleXSmall">
+					<input class="pycsTextbox" type="text" id="location" />
+				</div>
+				
+				<div class="col-7 edmondstyleXSmall">
+					<input class="pycsTextbox" type="text" id="name" />
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-11">
+					<span class="col-12 edmondstyleXSmall"></span>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-11 edmondstyleXSmall"><strong>Features You Are Providing:</strong></div>
+			</div>
+				
+			<div class="row">
+				<div class="col-11">
+					<span class="col-12 edmondstyleXSmall"></span>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-3">
+					<input type="checkbox" id="yieldChk" checked="true" disabled="true"/>
+					<label for="yieldChk">Yield</label>
+				</div>
+				
+				<div class="col-3" id="dateCutChk">	
+					<input id="dateCutChkInput" type="checkbox" checked="true" disabled="true"/>
+					<label for="dateCutChkInput">Date of cut</label>
+				</div>
+				
+				<div class="col-3" id="yearChk">	
+					<input id="yearChkInput" type="checkbox" checked="true" disabled="true"/>
+					<label for="yearChkInput">Year</label>
+				</div>
+				
+				<div class="col-3">
+					<input type="checkbox" id="rainChk"/>
+					<label for="rainChk">Rain</label>
+				</div>
+				
+				<div class="col-3">
+					<input type="checkbox" id="minTempChk"/>
+					<label for="minTempChk">Minimum Average Temperature</label>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-3">
+					<input type="checkbox" id="maxTempChk"/>
+					<label for="maxTmpChk">Maximum Average Temperature</label>
+				</div>
+				
+				<div class="col-3">
+					<input type="checkbox" id="radChk"/>
+					<label for="radChk">Accummulated solar radiation</label>
+				</div>
+				
+				<div class="col-3">	
+					<input type="checkbox" id="dateSownChk"/>
+					<label for="dateSownChk">Date sown</label>
+				</div>
+				
+				<div class="col-3">
+					<input type="checkbox" id="varietyChk"/>
+					<label for="varietyChk">Variety</label>	
+				</div>
+			</div>
+			
+
+		
+			<div class="row">
+				<div class="col-11">
+					<span class="col-12 edmondstyleXSmall"></span>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-3 edmondstyleXSmall" id="prevCuts">
+						
+					<select class="prevCuts">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+					<label for="prevCuts"><strong># Previous Cuts</strong></label>
+				</div>
+				<div class="col-3 edmondstyleXSmall" id="prevYears">
+					<select class="prevYears">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+					</select>
+					<label for="prevYears"><strong># Previous Years</strong></label>
+				</div>
+			</div>
+		
+			<div class="row">
+				<div class="col-11">
+					<span class="col-12 edmondstyleXSmall"></span>
+				</div>
+			</div>
+		
+			<div class="row">
+				<div class="col-3 edmondstyleXSmall">
+					<strong>Prediction Accuracy:</strong>
+				</div>
+			</div>
+			
+			<div class="row">
+				
+				<div class="col-3">
+					<input type="checkbox" id="3class"/>
+					<label for="3class">3 classes (hi, md, lo)
+				</div>
+				
+				<div class="col-3">
+					<input type="checkbox" id="nearestTon"/>
+					<label for="nearestTon">Nearest ton
+				</div>
+				
+				<div class="col-3">
+					<input type="checkbox" id="nearestTenth"/>
+					<label for="nearestTenth">Nearest tenth ton
+				</div>
+				
+				<div class="col-3">
+					<input type="checkbox" id="nearestHundredth"/>
+					<label for="nearestHundredth">Nearest hundredth ton
+				</div>
+			</div>
+				
+			
+			<div class="row">
+				<div class="col-11">
+					<span class="col-12 edmondstyleXSmall"></span>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-3 edmondstyleXSmall">
+					<strong>Train/Test:</strong>
+				</div>
+			</div>
+			
+			<fieldset>
+			<legend></legend>
+			<div class="row">
+				<div class="col-4 offset-2">
+					<input type="radio" id="trainTestOwn" checked name="trainTestOptions"/>
+					<label for="trainTestOwn">Split submitted dataset into train & test
+				</div>
+				
+				<div class="col-6">
+					<input type="radio" id="testOwnSelectStates" name="trainTestOptions"/>
+					<label for="trainTestOwn">Test on submitted dataset, train on (select):</label>
+					<select multiple="true" id="selectTrainingState" size="1">
+						<option value="GA">GA</option>
+						<option value="PA">PA</option>
+						<option value="KY">KY</option>
+						<option value="ND">ND</option>
+						<option value="OH">OH</option>
+						<option value="MS">MS</option>
+						<option value="WI">WI</option>
+					</select>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-4 offset-2">
+					<input type="radio" id="trainOwnTestTarget" name="trainTestOptions"/>
+					<label for="trainOwnTestTarget">Train on submitted dataset, test on dataset in other submission</label>
+				</div>
+				
+				<div class="col-6">
+					<input type="radio" id="testOwnTrainSource" name="trainTestOptions"/>
+					<label for="testOwnTrainSource">Test on submitted dataset, train on dataset in other submission</label>
+				</div>
+			</div>
+			</fieldset>
+			
+			<div class="row">
+				<div class="col-9 offset-2">
+					<input type="checkbox" id="synthData"/>
+					<label for="synthData">Increase training dataset size with data synthesis</label>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-9 offset-2">
+					<input type="text" id="numSynthSamples"/>
+					<label for="numSynthSamples"># synth samples (&lt;= 500K)</label>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-11">
+					<span class="col-12 edmondstyleXSmall"></span>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-11 edmondstyleXSmall">
+					<label for="notes"><strong>Notes:</strong></label>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-11">
+					<input type="textarea" class="notes" id="notes"/>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-11">
+					<span class="col-12 edmondstyleXSmall"></span>
+				</div>
+			</div>
+			
+			
+			<div class="row">
+				<div class="col-3 offset-5">
+					<input type="submit" value="Submit Form"/>
+				</div>
+			</div>
+		</form><!-- </mainForm> -->
+		
+	</body>
+	
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="js/edmondScript.js"></script>
+</html>

@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+input[type=checkbox] {
+  width: 25px;
+  height:25px;
+}
+
+input[type=radio] {
+  width: 25px;
+  height:25px;
+}
+
+.notes {
+	height: 100px;
+	width: 500px;
+}
+
+.pycsTextbox {
+	width: 400px;
+}
+
+#fileFormatPerYear {
+	display: none;
+}
+
+#prevYears {
+	display: none;
+}
+
+#yearChk {
+	display:none;
+}
+
+.edmondstyleLarge {
+	font-family: "Montserrat", sans-serif;
+	font-size: 48pt;
+	font-weight:bold;
+	color: black;
+}
+
+
+.edmondstyleSmall {
+	font-family: "Montserrat", sans-serif;
+	font-size: 28pt;
+	font-weight:bold;
+	color: black;
+}
+
+
+.edmondstyleXSmall {
+	font-family: "Montserrat", sans-serif;
+	font-size: 14pt;
+	color: black;
+	/*line-height: 1.75;*/
+}
+
+
+
+img {
+  display: block;
+  /*width: 700px;
+  max-height: 800px;*/
+  overflow: hidden;
+}
+
+body {
+	background-color: #c5d5cb;
+}
+
+
+.edmondson {
+	padding-left: 50px;
+}
+
+
+
+.tenPxBottomTop {
+	padding-bottom: 30px;
+	padding-top: 30px;
+}
+
+.fixOrientation {
+	image-orientation: from-image;
+}
+
+.about {
+	display: none;
+}
+
+.pretrainedMode {
+	display: none;
+}
+
+.trainTestSame {
+	display: none;
+}
+
+.TDA {
+	display: none;
+}
+
+.STDA {
+	display: none;
+}
+
+.localSynth {
+	display: none;
+}

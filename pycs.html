@@ -1,0 +1,199 @@
+<html>
+
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+
+	<body class="container">
+		<div class="row text-center">
+			<div class="col-8 offset-2 offset-lg-2">
+				<h1 class="edmondstyleSmall">Welcome to PYCS!</h1>
+			</div>
+		</div>
+			
+		<div class="row text-center">
+			<div class="col-2 offset-4 offset-lg-5">
+				<h1 class="edmondstyleSmall"><del>)(</del></h1>
+			</div>
+		</div>
+		
+		<div class="row text-center">
+			<div class="col-6 offset-3 offset-lg-3">
+				<h2 class="edmondstyleXSmall">(<strong>P</strong>redict <strong>Y</strong>our <strong>C</strong>rop<strong>S</strong>, pronounced like pisces)</h2>
+			</div>
+		</div>
+		
+		<div class="row text-center">
+			<div class="col-8 offset-2 offset-lg-2 edmondson">
+				<h1 class="edmondstyleSmall">Crop Yield Prediction</h1>
+			</div>
+		</div>
+		
+		<div class="row text-center">
+			<div class="col-8 offset-2 offset-lg-2">
+				<h1 class="edmondstyleSmall">And What-If Tool</h1>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-11">
+				<span class="col-12 edmondstyleXSmall" ><button id="estimationModeBtn">Estimation Mode</button></span>
+			</div>
+		</div>
+			
+		<div class="row">
+			<div class="col-11">
+				<span class="col-12 edmondstyleXSmall"></span>
+			</div>
+		</div>
+		
+		<div class="estimationMode">
+			
+			<div class="row">
+				<div class="col-11">
+					<span class="col-12 offset-1 edmondstyleXSmall"><button id="pretrainedBtn">Use Pre-trained Models</button></span>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-11">
+					<span class="col-12 edmondstyleXSmall"></span>
+				</div>
+			</div>
+			
+			<div class="row pretrainedMode">
+				<div class="col-6 offset-2"><span class="edmondstyleXSmall"><button id="trainTestSameBtn">Train & Test on Same Dataset With Split</button></span>
+					<div class="row trainTestSame">
+					
+						<div class="row">
+							<div class="col-11">
+								<span class="col-12 edmondstyleXSmall"></span>
+							</div>
+						</div>
+
+						<form action="">
+						  <input type="file" id="testTrainData" name="testTrainData">
+						  <input type="submit">
+						</form>
+					</div>
+				</div>
+			
+				<div class="row">
+					<div class="col-11">
+						<span class="col-12 edmondstyleXSmall"></span>
+					</div>
+				</div>
+				
+				<div class="col-6 offset-2"><span class="edmondstyleXSmall"><button id="TDABtn">Trivial Domain Adaptation (TDA)</button></span>
+					<div class="row TDA">
+					
+						<div class="row">
+							<div class="col-11">
+								<span class="col-12 edmondstyleXSmall"></span>
+							</div>
+						</div>
+						
+						<form action="">
+						  <input type="file" id="tdaTarget" name="tdaTarget">
+						  <input type="submit">
+						</form>
+					</div>
+				</div>
+			
+				<div class="row">
+					<div class="col-11">
+						<span class="col-12 edmondstyleXSmall"></span>
+					</div>
+				</div>
+				
+				<div class="col-6 offset-2"><span class="edmondstyleXSmall"><button id="STDABtn">Synthetic Tabular Domain Adaptation (STDA)</button></span>
+					<div class="row STDA">
+					
+						<div class="row">
+							<div class="col-11">
+								<span class="col-12 edmondstyleXSmall"></span>
+							</div>
+						</div>
+						
+						<form action="">
+						  <input type="file" id="STDAtargetData" name="STDAtargetData">
+						  <input type="submit">
+						</form>
+					</div>
+				</div>
+			
+				<div class="row">
+					<div class="col-11">
+						<span class="col-12 edmondstyleXSmall"></span>
+					</div>
+				</div>
+				
+				<div class="col-6 offset-2"><span class="edmondstyleXSmall"><button id="localSynthBtn">Synthesize Data from Local Dataset</button></span>
+					<div class="row localSynth">
+					
+						<div class="row">
+							<div class="col-11">
+								<span class="col-12 edmondstyleXSmall"></span>
+							</div>
+						</div>
+						
+						<form action="">
+						  <input type="file" id="localSynthData" name="localSynthData">
+						  <input type="submit">
+						</form>
+					</div>
+				</div>
+			
+				<div class="row">
+					<div class="col-11">
+						<span class="col-12 edmondstyleXSmall"></span>
+					</div>
+				</div>
+			</div><!-- </preTrainedMode> -->
+				
+			
+			<div class="row">
+				<div class="col-11">
+					<span class="col-12 edmondstyleXSmall"></span>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-11">
+					<span class="col-12 offset-1 edmondstyleXSmall"><button>Train New Models</button></span>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-11">
+					<span class="col-12 edmondstyleXSmall"></span>
+				</div>
+			</div>
+		
+		</div><!-- </estimationMode> -->
+		
+		<div class="row">
+			<div class="col-11">
+				<span class="col-12 edmondstyleXSmall"><button>Prediction Mode</button></span>
+			</div>
+		</div>
+		
+		<!-- <div class="row">	
+			<div class="col-12 offset-1 artistStatement edmondstyleXSmall">
+				Guitar<br/>
+			</div>
+		</div> -->
+			
+		
+			
+		
+		
+	</body>
+	
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="js/edmondScript.js"></script>
+</html>
